@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Danfixx</title>
+		<link rel="icon" href="danfossicon.jpg">
+		<!-- Twitter Bootstrap -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bluemix_style.css" type="text/css" media="screen, projection" />
+<head>
+<link rel="icon" href="img/danfossicon.jpg">
+</head>
+<body ng-app="testSample" ng-controller="AppCtrl" class="base-color4">
+		<nav class="navbar navbar-default navbar-fixed-top lower-nav base-color2 no-border shadowed" role="navigation">
+      <div class="container wide-container">
+        <div class="navbar-header">
+          <p id="application-name" class="navbar-brand">Danfixx Project</p>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a class="button-color nav-text" href="/">Application</a>
+            </li>
+            <li>
+              <a class="button-color nav-text" href="overview.html">Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		<nav class="navbar navbar-default navbar-fixed-top small-nav base-color no-border shadowed" role="navigation">
+			<div class="container wide-container">
+				<div class="navbar-collapse collapse small-nav" id="navbar-main">
+          <ul class="nav navbar-nav small-nav">
+            <li>
+							<a href="http://www.danfoss.dk/home/#/" class="h5 button-color" target="_blank">
+								<img src="img/danfossicon.jpg" class="inline-icon">
+							</a>
+            </li>
+          </ul>
+        </div>
+			</div>
+		</nav>
+
+    <div class="container wide-container">
+      <div class="small-nav"></div>
+			<div class="page-header"></div>
+      <div class="well base-color2 special-border">
+				<h3>Welcome Home</h3>
+        <hr class="special-border" />
+        <div class="body">
+        <center><b>------------------------------------------------------------- Select <u>time</u> and <u>day</u> for which the prediction is desired: -------------------------------------------------------------------<b></center>
+        <div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-calendar"></i> Day
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="MONDAY">Monday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="TUESDAY">Tuesday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="WEDNESDAY">Wednesday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="THURSDAY">Thursday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="FRIDAY">Friday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="SATURDAY">Saturday</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.day" value="SUNDAY">Sunday</label></li>
+ 				 </ul>
+			</div>
+        	<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-time"></i> Hour
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+    				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="1">1</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="2">2</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="3">3</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="4">4</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="5">5</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="6">6</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="7">7</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="8">8</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="9">9</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="10">10</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="11">11</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="12">12</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="13">13</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="14">14</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="15">15</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="16">16</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="17">17</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="18">18</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="19">19</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="20">20</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="21">21</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="22">22</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="23">23</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.hour" value="24">24</label></li>
+ 				 </ul>
+			</div>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-time"></i> Minute
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+    				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="1">1</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="2">2</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="3">3</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="4">4</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="5">5</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="6">6</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="7">7</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="8">8</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="9">9</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="10">10</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="11">11</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="12">12</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="13">13</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="14">14</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="15">15</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="16">16</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="17">17</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="18">18</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="19">19</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="20">20</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="21">21</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="22">22</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="23">23</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="24">24</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="25">25</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="26">26</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="27">27</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="28">28</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="29">29</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="30">30</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="31">31</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="32">32</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="33">33</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="34">34</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="35">35</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="36">36</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="37">37</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="38">38</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="39">39</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="40">40</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="41">41</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="42">42</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="43">43</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="44">44</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="45">45</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="46">46</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="47">47</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="48">48</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="49">49</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="50">50</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="51">51</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="52">52</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="53">53</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="54">54</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="55">55</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="56">56</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="57">57</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="58">58</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="59">59</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.minute" value="60">60</label></li>
+ 				 </ul>
+			</div>
+			<br>
+			<br>
+			<br>
+			<center><b>------------------------------------------------------------------ Select which of the inhabitants are <u>home</u> or <u>away</u>: -----------------------------------------------------------------------<b></center>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-home"></i> User #1 - Mum
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_1" value="HOME">Home</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_1" value="AWAY">Away</label></li>
+ 				 </ul>
+			</div>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-home"></i> User #2 - Dad
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_2" value="HOME">Home</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_2" value="AWAY">Away</label></li>
+ 				 </ul>
+			</div>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-home"></i> User #3 - Kid
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_3" value="HOME">Home</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.user_3" value="AWAY">Away</label></li>
+ 				 </ul>
+			</div>
+			<br>
+			<br>
+			<br>
+			<center><b>------------------------------------------------------- Select the conditions for the <u>weather</u> and the <u>outside temperature</u>: ----------------------------------------------------------<b></center>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-leaf"></i> Weather
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="SUNNY">Sunny</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="MOSTLY SUNNY">Mostly Sunny</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="FAIR">Fair</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="PARTLY CLOUDY">Partly Cloudy</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="PARTLY CLOUDY/WIND">Partly Cloudy/Wind</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="MOSTLY CLOUDY">Mostly Cloudy</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="CLOUDAY">Cloudy</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="FOG">Fog</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="SHOWERS IN THE VICINITY">Rain Nearby</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.weather" value="RAIN SHOWER">Rain Shower</label></li>
+ 				 </ul>
+			</div>
+			<div class="dropdown" style="float:left;margin-top:0px;padding-top:0px;margin: 10px;">
+  			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-leaf"></i> Average Outside Temperature
+  				<span class="caret"></span></button>
+  					<ul class="dropdown-menu">
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="-5">-5 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="-4">-4 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="-3">-3 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="-2">-2 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="-1">-1 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="0">0 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="1">1 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="2">2 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="3">3 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="4">4 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="5">5 Degrees</label></li>
+  					<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="6">6 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="7">7 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="8">8 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="9">9 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="10">10 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="11">11 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="12">12 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="13">13 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="14">14 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="15">15 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="16">16 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="17">17 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="18">18 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="19">19 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="20">20 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="21">21 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="22">22 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="23">23 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="24">24 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="25">25 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="26">26 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="27">27 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="28">28 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="29">29 Degrees</label></li>
+      				<li>&nbsp;&nbsp;&nbsp;&nbsp;<label class="radio-inline"><input type="radio" ng-model="p.avg_outside_temp" value="30">30 Degrees</label></li>      				
+ 				 </ul>
+			</div>
+			<br>
+			<br>
+			<br>
+			<center><b>---------------------------------------------------- Select the room which you would like ot recieve a heating prediction on: ----------------------------------------------------<b></center>
+			<br>
+			<center><button type="button" class="btn btn-primary" ng-click="scoreLivingRoom()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Livingroom&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreKitchen()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Kitchen&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreBedroom()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Bedroom&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreGuest()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Guest Room&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreBathroom()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Bathroom&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreDiningRoom()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Dining Room&nbsp;</button>
+			<button type="button" class="btn btn-primary" ng-click="scoreGamingRoom()" style="background-color: #ed1b24; border-radius: 12px;"><i class="glyphicon glyphicon-cloud-upload"></i>&nbsp;Gaming Room&nbsp;</button></center>
+      	</div>
+    </div>
+
+	</div>
+
+
+  </body>
+
+  <!-- load angular via CDN -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+	<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+	<!-- our scripts -->
+	<script src="js/app.js"  type="text/javascript" ></script>
+	<script src="js/srv.js"  type="text/javascript" ></script>
+
+</html>

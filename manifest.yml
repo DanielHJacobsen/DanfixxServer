@@ -1,0 +1,5 @@
+---
+applications:
+- memory: 256M
+  name: Danfixx
+  host: Danfixx
